@@ -1,0 +1,27 @@
+# mount point	fstype    device    	[device2]
+
+/boot		    emmc 	/dev/bootimg									flags=display="Boot";backup=1
+/recovery 		emmc 	/dev/recovery									flags=display="Recovery";backup=1
+/nvram			emmc	/dev/nvram										flags=display="Nvram";backup=1;flashimg=1
+
+/custpack		ext4	/dev/block/mmcblk0p5							flags=display="Custpack";backup=1;wipeingui
+/system			ext4	/dev/block/mmcblk0p6							flags=display="System";backup=1;wipeingui
+/cache			ext4	/dev/block/mmcblk0p7							flags=display="Cache";wipeingui;wipeduringfactoryreset
+/data			ext4	/dev/block/mmcblk0p8 							flags=display="Data";wipeingui;settingsstorage;backup=1;wipeduringfactoryreset
+
+/pro_info		emmc	/dev/pro_info									flags=display="proinfo";backup=1
+/protect_f		emmc	/dev/block/mmcblk0p2							flags=display="protect_f";backup=1
+/protect_s		emmc	/dev/block/mmcblk0p3							flags=display="protect_s";backup=1
+/logo			emmc	/dev/logo										flags=display="logo";backup=1;flashimg=1
+/secro			emmc	/dev/block/mmcblk0p4							flags=display="secro";backup=1
+/tee1			emmc	/dev/tee1										flags=display="tee1";backup=1
+/tee2			emmc	/dev/tee2										flags=display="tee2";backup=1
+/ebr1			emmc	/dev/block/mmcblk0p1							flags=display="ebr1";backup=1
+/uboot 			emmc 	/dev/uboot 										flags=display="Uboot";backup=1;flashimg=1
+/expdb			emmc	/dev/expdb										flags=display="expdb";backup=1
+
+
+#/system_image	emmc	/dev/block/mmcblk0p6							flags=display="System Image";backup=1;flashimg=1;wipeingui
+
+/external_sd	vfat	/dev/block/mmcblk1p1							flags=display="External SDcard";storage;wipeingui;removable;backup=0
+/usbotg			auto	/dev/block/sda1									flags=display="USB-OTG";storage;removable;backup=0
