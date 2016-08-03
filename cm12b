@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+cd ~/cm12
+make clean
+source build/envsetup.sh
+lunch cm_8079-eng
+mka recoveryimage
